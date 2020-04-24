@@ -63,5 +63,57 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+.btn
+  line-height: 1
+  white-space: nowrap
+  cursor: pointer
+  position: relative
+  width: 232px
+  text-align: center
+  text-transform: uppercase
+  font-weight: 500
+  margin: 5px
+
+.btn-accent
+  color: #fff
+  background-color: $accent
+  padding: 16px
+  position: relative
+  z-index: 2
+  &:before
+    content: ''
+    position: absolute
+    left: -5px
+    top: -5px
+    border: 2px solid $accent
+    width: calc(100% + 10px)
+    height: calc(100% + 10px)
+    +mt(.3s)
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: $accent
+    +mt(.3s)
+  &:hover
+    &:after
+      left: -5px
+      top: -5px
+      width: calc(100% + 10px)
+      height: calc(100% + 10px)
+      background-color: $accent
+  &:focus, &:active
+    &:after
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+  span
+    position: relative
+    z-index: 2
+
 
 
