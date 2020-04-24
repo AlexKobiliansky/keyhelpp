@@ -43,6 +43,18 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    function heightses() {
+        if ($(window).width()>480) {
+            $('.service-item-title').height('auto').equalHeights()
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
 
     /** FORMS START */
     $.validate({

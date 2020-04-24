@@ -1,0 +1,50 @@
+.s-services
+  counter-reset: service-item
+
+.service-item
+  display: block
+  position: relative
+  counter-increment: service-item
+  &:before
+    content: '0'counter(service-item)
+    position: absolute
+    width: 72px
+    height: 72px
+    line-height: 72px
+    font-size: 32px
+    font-weight: 700
+    color: #fff
+    background-color: $accent
+    left: 14px
+    bottom: 0
+    z-index: 2
+    text-align: center
+  &-img
+    position: relative
+    display: block
+    height: 260px
+    width: 100%
+    +bg-cover
+    &:before
+      content: ''
+      position: absolute
+      +mt(.3s)
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: $accent-dark
+      opacity: .5
+  &-title
+    font-size: 18px
+    line-height: 1.1
+    padding: 7px 5px 7px 98px
+    color: $text
+    display: flex
+    align-items: center
+  &:hover
+    .service-item-img
+      &:before
+        opacity: .2
+    .service-item-title
+      color: $accent
