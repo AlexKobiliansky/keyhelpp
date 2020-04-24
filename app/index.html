@@ -26,25 +26,111 @@
 
 </head>
 
+
 <body>
-<!-- ======= SECTION INTRO START ======= -->
-<section class="s-intro" style="background-image: url('img/bg-intro.jpg');">
-	<div class="container">
-		<!-- ======= HEADER START ======= -->
-		<header class="main-head">
-			<div class="top-line">
-				<a href="/" class="top-logo top-item">
-					<img src="img/logo.png" alt="alt" class="img-responsive">
-				</a>
-				<div class="top-address top-item">г. Москва Рязанский проспект 74</div>
-				<a href="#0" class="btn btn-accent"><span>Оставить заявку</span></a>
-				<a href="tel:89269024874" class="top-phone top-item">8 (926) 902 48-74</a>
-			</div>
-		</header>
-		<!-- ======= HEADER END ======= -->
+<!-- preloader -->
+<div class="preloader">
+	<div class="sk-wave">
+		<div class="sk-rect sk-rect-1"></div>
+		<div class="sk-rect sk-rect-2"></div>
+		<div class="sk-rect sk-rect-3"></div>
+		<div class="sk-rect sk-rect-4"></div>
+		<div class="sk-rect sk-rect-5"></div>
 	</div>
-</section>
-<!-- ======= SECTION INTRO END ======= -->
+</div>
+<!-- /preloader -->
+
+<div id="page-container">
+	<!-- mobile-mnu -->
+	<nav id="mobile-mnu" data-logo="img/logo.png">
+		<ul>
+			<li><a href="#0">Автомобильные ключи</a></li>
+			<li><a href="#0">Ремонт зажигания замка</a></li>
+			<li><a href="#0">Вскрытие автомобилей</a></li>
+			<li><a href="#0">Цены</a></li>
+			<li><a href="#0">Контакты</a></li>
+		</ul>
+	</nav>
+	<!-- mobile-mnu -->
+
+
+	<!-- ======= SECTION INTRO START ======= -->
+	<section class="s-intro" style="background-image: url('img/bg-intro.jpg');">
+		<div class="container">
+			<!-- ======= HEADER START ======= -->
+			<header class="main-head">
+				<div class="top-line">
+					<a href="/" class="top-logo top-item">
+						<img src="img/logo.png" alt="alt" class="img-responsive">
+					</a>
+					<div class="top-address top-item">г. Москва Рязанский проспект 74</div>
+					<button class="hamburger hamburger--elastic" type="button" id="mmenu-btn">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+					<a href="#0" class="btn btn-accent"><span>Оставить заявку</span></a>
+					<a href="tel:89269024874" class="top-phone top-item">8 (926) 902 48-74</a>
+				</div>
+
+				<div class="mnu-line">
+					<nav class="main-mnu">
+						<ul>
+							<li><a href="#0">Автомобильные ключи</a></li>
+							<li><a href="#0">Ремонт зажигания замка</a></li>
+							<li><a href="#0">Вскрытие автомобилей</a></li>
+							<li><a href="#0">Цены</a></li>
+							<li><a href="#0">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- ======= HEADER END ======= -->
+
+			<div class="intro-content">
+
+				<div class="intro-text">
+					<h1>Потеряли ключи? <br><span>Восстановим в этот же день!</span></h1>
+				</div>
+				<img src="img/intro-img.png" alt="alt" class="intro-img img-responsive">
+				<form class="contact-form block-form">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Keyhelpp">
+					<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+					<input type="hidden" name="form_subject" value="Заявка с сайта Keyhelpp">
+					<!-- END Hidden Required Fields -->
+
+					<h3>Остались вопросы?</h3>
+					<p>Закажите звонок и мы ответим на них</p>
+
+					<div class="form-labels-wrap">
+						<label>
+							<input id="test-input" type="text" placeholder="Имя" name="Имя" autocomplete="off" data-validation="custom"
+								   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+						</label>
+
+						<label class="mb-20">
+							<input type="text" class="user-phone" name="Телефон" placeholder="Телефон"
+								   autocomplete="off" data-validation="custom"
+								   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+						</label>
+
+						<label class="label-checkbox">
+							<input type="checkbox" required checked> <span>Я полностью согласен с условиями пользовательского соглашения</span>
+						</label>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="submit" class="btn btn-accent"><span>Отправить</span></button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- ======= SECTION INTRO END ======= -->
+</div>
+
 
 <script src="js/scripts.min.js"></script>
 

@@ -73,6 +73,9 @@ ul
   text-transform: uppercase
   font-weight: 500
   margin: 5px
+  box-shadow: none
+  border: none
+  letter-spacing: 0.04em
 
 .btn-accent
   color: #fff
@@ -114,6 +117,80 @@ ul
   span
     position: relative
     z-index: 2
+
+
+form
+  width: 555px
+  background-color: #fff
+  border: 3px solid #e8e8e8
+  color: $text
+  padding: 40px 25px 45px
+  .form-labels-wrap
+    padding: 0 25px
+  h3
+    text-align: center
+    font-family: "Oswald", sans-serif
+    font-weight: 700
+    font-size: 34px
+    text-transform: uppercase
+    line-height: 1
+    letter-spacing: 0.06em
+  p
+    font-size: 18px
+    text-align: center
+    margin-bottom: 30px
+  label
+    display: block
+    margin-bottom: 22px
+    &.mb-20
+      margin-bottom: 20px
+  input
+    width: 100%
+    line-height: 1
+    font-size: 18px
+    padding: 15px 0
+    border: none
+    border-bottom: 1px solid $text
+    &::placeholder
+      color: $text
+    &:focus
+      border-color: $accent
+    &.error
+      color: red!important
+      border-color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none!important
+  .label-checkbox
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 45px
+    span
+      width: calc(100% - 34px)
+      font-size: 14px
+      color: #bababa
+      line-height: 1
+  .btn-wrap
+    text-align: center
+
+.jq-checkbox
+  width: 24px
+  height: 24px
+  margin-right: 10px
+  border-radius: 0
+  border: 1px solid $accent
+  background: transparent
+  box-shadow: none
+  &.focused
+    border-color: $accent
+
+.jq-checkbox.checked .jq-checkbox__div
+  width: 16px
+  height: 8px
+  border-color: $accent
+  margin: 4px 0 0 3px
 
 
 

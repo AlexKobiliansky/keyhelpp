@@ -5,16 +5,110 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .top-address
+    font-size: 16px
+
+  .top-phone
+    font-size: 22px
+
+  .main-mnu
+    a
+      padding-left: 20px
+      padding-right: 20px
+
+  .intro-content
+    form
+      display: none
+
+  .intro-img
+    left: 0
 
 // ≥992px
 +media-breakpoint-down(md)
+  .mnu-line
+    display: none
+
+  .top-line
+    flex-wrap: wrap
+    .btn
+      margin-top: 10px
+    .top-phone
+      margin-top: 10px
+
+  .hamburger
+    display: block
+
+  .top-address
+    width: calc(100% - 230px)
+    text-align: center
+
+  .intro-content
+    padding-top: 20px
+
+  .intro-text
+    width: auto
+
+  .intro-img
+    position: relative
+    top: 0
+    margin-top: 70px
+
+  .s-intro
+    height: auto
+    padding-bottom: 50px
 
 // ≥768px
 +media-breakpoint-down(sm)
+  .top-address
+    padding-left: 10px
+
+  .intro-text
+    h1
+      font-size: 32px
 
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .intro-text
+    h1
+      font-size: 28px
+
+  .intro-content
+    padding-top: 0
+
+  .intro-img
+    margin-top: 50px
+
+  .top-line
+    .btn
+      order: 3
+      font-size: 12px
+      width: 160px
+
+  .top-phone
+    order: 3
+    font-size: 20px
+
+  .top-address
+    order: 2
+    width: 100%
+    margin-bottom: 10px
+
+@media (max-width: 390px)
+
+  .intro-text
+    padding-top: 30px
+    h1
+      font-size: 24px
+
+  .top-phone
+    width: 100%
+    text-align: center
+
+  .top-line
+    .btn
+      margin-left: auto
+      margin-right: auto
 
 /*==========  Mobile First  ==========*/
 
