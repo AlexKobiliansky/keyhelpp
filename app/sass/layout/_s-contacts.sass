@@ -1,0 +1,65 @@
+.s-contacts
+  padding: 0
+  overflow: hidden
+  position: relative
+  .section-title
+    text-align: left
+    margin-bottom: 5px
+  .container
+    position: relative
+    &:after
+      content: 'Контакты'
+      position: absolute
+      font-family: "Oswald", sans-serif
+      font-size: 110px
+      font-weight: 700
+      z-index: 3
+      color: $text
+      opacity: .1
+      transform: rotate(90deg)
+      right: -328px
+      bottom: 190px
+      letter-spacing: .06em
+      text-transform: uppercase
+  form
+    position: absolute
+    right: 0
+    bottom: 0
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: calc(260px + ((100vw - 1170px)/2))
+    background-color: #e8e8e8
+    right: 0
+    bottom: 0
+
+.contacts-desc
+  line-height: 1.25
+  color: #515151
+  font-weight: 300
+  margin-bottom: 22px
+
+.contacts-block
+  font-size: 18px
+  margin-bottom: 35px
+  p
+    margin-bottom: 10px
+  span
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 700
+    color: $accent
+  a
+    color: $text
+    +mt(0s)
+    &:hover
+      color: $accent
+      text-decoration: underline
+
+#map
+  position: relative
+  width: calc(600px + ((100vw - 1140px)/2))
+  left: calc(0px - ((100vw - 1140px)/2))
+  height: 440px
+  background-color: #eee

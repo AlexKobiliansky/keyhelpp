@@ -124,7 +124,8 @@ form
   background-color: #fff
   border: 3px solid #e8e8e8
   color: $text
-  padding: 40px 25px 45px
+  padding: 84px 84px 74px
+  z-index: 2
   .form-labels-wrap
     padding: 0 25px
   h3
@@ -174,6 +175,19 @@ form
       line-height: 1
   .btn-wrap
     text-align: center
+  &.dark-form
+    background-color: $accent-dark
+    color: #fff
+    border-color: $accent-dark
+    input
+      background-color: transparent
+      color: #fff
+      border-color: #fff
+      &:focus
+        border-color: $accent
+      &::placeholder
+        color: #fff
+
 
 .jq-checkbox
   width: 24px
