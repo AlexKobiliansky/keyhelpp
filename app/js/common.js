@@ -15,7 +15,7 @@ $(document).ready(function(){
         },
         "extensions": [
             "theme-dark",
-            // "pagedim-black",
+            "pagedim-black",
             "position-front",
             "fx-listitems-slide",
         ],

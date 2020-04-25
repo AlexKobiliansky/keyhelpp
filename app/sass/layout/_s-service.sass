@@ -1,0 +1,41 @@
+.s-service
+  position: relative
+  padding-top: 0
+  padding-bottom: 145px
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: calc(260px + ((100vw - 1170px)/2))
+    background-color: #e8e8e8
+    right: 0
+    bottom: 0
+  header
+    z-index: 3
+    position: relative
+  .top-phone
+    color: $text
+    &:hover
+      color: $accent
+
+.service-wrapper
+  position: relative
+  z-index: 2
+
+.service-img
+  width: 540px
+  height: 390px
+  overflow: hidden
+  position: absolute
+  top: 0
+  right: -615px
+  img
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+.service-desc
+  font-size: 18px
+  line-height: 1.25
+  font-weight: 300
+  margin-bottom: 45px
