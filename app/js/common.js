@@ -39,9 +39,62 @@ $(document).ready(function(){
             mmenuBtn.removeClass( "is-active" );
         }, 300);
     });
-    /**
-     * end mobile-mnu customization
-     */
+    /** end mobile-mnu customization */
+
+    $('.works-slider').on('initialize.owl.carousel', function (e) {
+        var $slides = $(this).find('.works-slide');
+        var $totalSlides = $slides.length;
+        var currentItem = e.item.index + 3;
+
+        if($totalSlides < 10) {
+            $('#works-nums .total').text('0'+$totalSlides);
+        } else {
+            $('#works-nums .total').text($totalSlides);
+        }
+        if(currentItem < 10) {
+            $('#works-nums .current').text('0' + currentItem);
+        } else {
+            $('#works-nums .current').text(currentItem);
+        }
+    });
+
+
+    var $worksSlider = $('.works-slider').owlCarousel({
+        items: 1,
+        loop: false,
+        dots: true,
+        autoplay: false,
+        navText: ["", ""],
+        autoWidth: true,
+        responsive: {
+            0: {
+                nav: false,
+                margin: 15
+            },
+            768: {
+                nav: true,
+                margin: 30
+            }
+        }
+    });
+
+    var $worksCurrent = $('#works-nums .current');
+    var $worksTotal = $('#works-nums .total');
+
+    $worksSlider.on('changed.owl.carousel', function (e) {
+        var currentItem = e.item.index + 3;
+        if(currentItem < 10) {
+            $('#works-nums .current').text('0' + currentItem);
+        } else {
+            $('#works-nums .current').text(currentItem);
+        }
+    });
+
+
+    $('.works-slide').photoswipe();
+
+
+
 
     function heightses() {
         if ($(window).width()>480) {

@@ -3,8 +3,30 @@
 
 /*==========  Desktop First  ==========*/
 
+@media(max-width: 1700px)
+  .works-img
+    display: none
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .slider-nums
+    right: 72px
+
+  .works-content
+    width: calc(100% + ((100vw - 930px)/2))
+    padding-left: 50px
+    &:before
+      font-size: 74px
+      top: 303px
+      left: -300px
+
+  .owl-carousel
+    position: relative
+    .owl-nav
+      position: absolute
+      width: 189px
+      right: 30px
 
   .stock-item
     &-img
@@ -55,6 +77,27 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .works-content
+    padding-top: 50px
+    width: calc(100% + ((100vw - 690px)/2))
+    padding-bottom: 90px
+    &:before
+      font-size: 58px
+      left: -240px
+      top: 242px
+    .section-title
+      text-align: left
+
+  .works-slider
+    .owl-dots
+      left: 300px
+
+  .works-slide
+    width: 260px
+
+  .slider-nums
+    top: 50px
 
   .stock-item
     &-img
@@ -115,6 +158,25 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-works
+    &:before
+      width: 300px
+
+  .works-content
+    padding-top: 50px
+    width: calc(100% + ((100vw - 510px)/2))
+    .section-title
+      text-align: center
+
+  .works-slider
+    .owl-dots
+      left: 0
+      width: 100%
+      text-align: center
+
+  .slider-nums
+    display: none
+
   .adv-item
     width: 50%
 
@@ -137,6 +199,17 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-works
+    padding-bottom: 40px
+    &:before
+      display: none
+
+  .works-content
+    width: calc(100% + 30px)
+    left: -15px
+    padding-left: 15px
+    padding-top: 40px
 
   .adv-item
     .svg
@@ -187,6 +260,11 @@
     margin-bottom: 10px
 
 @media (max-width: 390px)
+
+
+
+  .works-slide
+    width: 200px
 
   .stock-item
     &-img

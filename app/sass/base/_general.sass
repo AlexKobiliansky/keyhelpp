@@ -208,5 +208,55 @@ section
   background-color: $accent-dark
   color: #fff
 
+.slider-nums
+  font-family: "Oswald", sans-serif
+  font-size: 36px
+  letter-spacing: 0.06em
+  font-weight: 700
+  position: absolute
+  top: 70px
+  right: calc(50px + ((100vw - 1148px)/2))
+  line-height: 1
+
+.owl-carousel
+  position: relative
+  .owl-nav
+    position: absolute
+    width: 189px
+    right: calc((100vw - 1140px)/2)
+    top: -83px
+    button.owl-prev, button.owl-next
+      width: 34px
+      height: 34px
+      +bg-cover
+      cursor: pointer
+      position: absolute
+      top: 0
+    button.owl-prev
+      background-image: url('../img/icons/slider-arrow-accent.svg')
+      transform: rotate(180deg)
+      left: 0
+    button.owl-next
+      background-image: url('../img/icons/slider-arrow.svg')
+      right: 0
+  .owl-dots
+    button.owl-dot
+      display: inline-block
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background-color: #e6e6e6
+      margin: 0 4px
+      cursor: pointer
+      position: relative
+      top: 0
+      &.active
+        width: 16px
+        height: 16px
+        background-color: $accent
+        top: 2px
+        margin: 0 2px
+
+
 
 
