@@ -1,0 +1,26 @@
+.s-stocks
+  padding-bottom: 0
+
+.stock-item
+  &-img
+    height: 300px
+    +bg-cover
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($accent-dark, .2)
+  &-title
+    font-size: 20px
+    font-weight: 500
+    background-color: $accent
+    color: #fff
+    line-height: 1.3
+    margin: 0 45px
+    padding: 14px 33px
+    position: relative
+    top: -60px
