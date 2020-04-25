@@ -369,5 +369,26 @@ section
     transform: scale(1)
 
 
+.breadcrumbs
+  line-height: 1
+  font-size: 14px
+  font-weight: 300
+  margin: 25px 0 45px
+  a
+    display: inline-block
+    color: #e8e8e8
+    position: relative
+    &:after
+      content: ' |'
+      color: #e8e8e8
+    &:hover
+      color: $accent
+    &:last-child
+      pointer-events: none
+      color: $accent
+      &:after
+        display: none
+
+
 
 
