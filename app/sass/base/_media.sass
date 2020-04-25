@@ -102,6 +102,16 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .main-foot
+    .btn, .top-address, .top-phone
+      display: none
+    .hamburger
+      padding: 0
+      position: relative
+      top: 4px
+    .top-logo
+      margin-bottom: 0
+
   .s-contacts
     form
       position: relative
@@ -269,6 +279,12 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .popup-form
+    max-width: 100%
+    padding: 30px 20px
+    h3
+      font-size: 28px
+
   #map
     width: calc(100% + 30px)
     left: -15px
@@ -358,6 +374,10 @@
     margin-bottom: 10px
 
 @media (max-width: 390px)
+
+  .popup-form
+    p
+      font-size: 16px
 
   form
     .form-labels-wrap

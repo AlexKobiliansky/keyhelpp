@@ -25,7 +25,7 @@ $(document).ready(function(){
         },
     });
 
-    var mmenuBtn = $("#mmenu-btn");
+    var mmenuBtn = $(".mmenu-btn");
     var API = $mmenu.data("mmenu");
 
     mmenuBtn.click(function() {
@@ -156,8 +156,25 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.preloader').fadeOut();
+
 
     /** FORMS START */
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     $.validate({
         form : '.contact-form',
         scrollToTopOnError: false
@@ -177,13 +194,19 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").find('span').text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").find('span').text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });

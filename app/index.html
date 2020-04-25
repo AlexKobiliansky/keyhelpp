@@ -30,12 +30,9 @@
 <body>
 <!-- preloader -->
 <div class="preloader">
-	<div class="sk-wave">
-		<div class="sk-rect sk-rect-1"></div>
-		<div class="sk-rect sk-rect-2"></div>
-		<div class="sk-rect sk-rect-3"></div>
-		<div class="sk-rect sk-rect-4"></div>
-		<div class="sk-rect sk-rect-5"></div>
+	<div class="sk-chasing-dots">
+		<div class="sk-child sk-dot-1"></div>
+		<div class="sk-child sk-dot-2"></div>
 	</div>
 </div>
 <!-- /preloader -->
@@ -64,7 +61,7 @@
 						<img src="img/logo.png" alt="alt" class="img-responsive">
 					</a>
 					<div class="top-address top-item">г. Москва Рязанский проспект 74</div>
-					<button class="hamburger hamburger--elastic" type="button" id="mmenu-btn">
+					<button class="hamburger hamburger--elastic mmenu-btn" type="button" id="mmenu-btn">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
@@ -580,11 +577,64 @@
 				<div class="btn-wrap">
 					<button type="submit" class="btn btn-accent"><span>Отправить</span></button>
 				</div>
-
 			</form>
 		</div>
 	</section>
 	<!-- ======= SECTION CONTACTS END ======= -->
+
+	<!-- ======= FOOTER START ======= -->
+	<footer class="main-foot">
+		<div class="container">
+			<div class="top-line">
+				<a href="/" class="top-logo top-item">
+					<img src="img/logo.png" alt="alt" class="img-responsive">
+				</a>
+				<div class="top-address top-item">г. Москва Рязанский проспект 74</div>
+				<button class="hamburger hamburger--elastic mmenu-btn" type="button" >
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+				</button>
+				<a href="#popup-form" class="btn btn-accent"><span>Оставить заявку</span></a>
+				<a href="tel:89269024874" class="top-phone top-item">8 (926) 902 48-74</a>
+			</div>
+		</div>
+	</footer>
+	<!-- ======= FOOTER END ======= -->
+</div>
+
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Keyhelpp">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Keyhelpp">
+		<!-- END Hidden Required Fields -->
+
+		<h3>Оставьте заявку</h3>
+		<p>И мы свяжемся с Вами в ближайшее время</p>
+
+		<div class="form-labels-wrap">
+			<label>
+				<input type="text" placeholder="Имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+			</label>
+
+			<label class="mb-20">
+				<input type="text" class="user-phone" name="Телефон" placeholder="Телефон"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+			</label>
+
+			<label class="label-checkbox">
+				<input type="checkbox" required checked> <span>Я полностью согласен с условиями пользовательского соглашения</span>
+			</label>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="submit" class="btn btn-accent"><span>Отправить</span></button>
+		</div>
+	</form>
 </div>
 
 <!-- ======= HTML FOR PHOTOSWIPE ======= -->
