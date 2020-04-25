@@ -78,9 +78,6 @@ $(document).ready(function(){
         }
     });
 
-    var $worksCurrent = $('#works-nums .current');
-    var $worksTotal = $('#works-nums .total');
-
     $worksSlider.on('changed.owl.carousel', function (e) {
         var currentItem = e.item.index + 3;
         if(currentItem < 10) {
@@ -89,6 +86,57 @@ $(document).ready(function(){
             $('#works-nums .current').text(currentItem);
         }
     });
+
+
+    $('.reviews-slider').on('initialize.owl.carousel', function (e) {
+        var $slides = $(this).find('.review-item');
+        var $totalSlides = $slides.length;
+        // var currentItem = e.item.index + 2;
+        var currentItem = (e.item.index + 2) - e.relatedTarget._clones.length / 2;
+
+        if($totalSlides < 10) {
+            $('#reviews-nums .total').text('0'+$totalSlides);
+        } else {
+            $('#reviews-nums .total').text($totalSlides);
+        }
+        if(currentItem < 10) {
+            $('#reviews-nums .current').text('0' + currentItem);
+        } else {
+            $('#reviews-nums .current').text(currentItem);
+        }
+    });
+
+    var $reviewsSlider = $('.reviews-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        autoplay: false,
+        navText: ["", ""],
+        autoWidth: true,
+        startPosition: 1,
+        center: true,
+        responsive: {
+            0: {
+                nav: false,
+                margin: 15
+            },
+            768: {
+                nav: true,
+                margin: 30
+            }
+        }
+    });
+
+    $reviewsSlider.on('changed.owl.carousel', function (e) {
+        var currentItem = (e.item.index + 1) - e.relatedTarget._clones.length / 2;
+        if(currentItem < 10) {
+            $('#reviews-nums .current').text('0' + currentItem);
+        } else {
+            $('#reviews-nums .current').text(currentItem);
+        }
+    });
+
+
 
 
     $('.works-slide').photoswipe();

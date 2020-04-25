@@ -10,6 +10,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .reviews-slider
+    .owl-nav
+      top: -53px
+
+  .s-reviews
+    .slider-nums
+      top: 50px
+
   .slider-nums
     right: 72px
 
@@ -77,6 +85,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-reviews
+    .section-title
+      text-align: left
+      padding: 0 calc((100vw - 690px)/2)
+
+  .review-item
+    width: 600px
+    &-img
+      width: 250px
+    &-content
+      width: 350px
+      padding: 25px
+    &-desc
+      font-size: 14px
 
   .works-content
     padding-top: 50px
@@ -158,6 +181,19 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-reviews
+    .section-title
+      text-align: center
+
+  .review-item
+    width: 400px
+    flex-direction: column
+    &-img
+      width: 100%
+      height: 200px
+    &-content
+      width: 100%
+
   .s-works
     &:before
       width: 300px
@@ -167,6 +203,7 @@
     width: calc(100% + ((100vw - 510px)/2))
     .section-title
       text-align: center
+      padding-right: 0
 
   .works-slider
     .owl-dots
@@ -200,8 +237,22 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .review-item
+    width: 300px
+    &-user
+      .user-name
+        font-size: 18px
+        margin-bottom: 4px
+      .user-date
+        font-size: 14px
+
+  .s-reviews
+    .section-title
+      margin-bottom: 10px
+      padding: 0 15px
+
   .s-works
-    padding-bottom: 40px
+    padding-bottom: 0
     &:before
       display: none
 
@@ -261,7 +312,20 @@
 
 @media (max-width: 390px)
 
-
+  .review-item
+    width: 250px
+    &-img
+      height: 160px
+    &-content
+      padding: 15px
+    &-user
+      .user-photo
+        width: 40px
+        height: 40px
+      .user-info
+        width: calc(100% - 50px)
+      .user-name
+        font-size: 16px
 
   .works-slide
     width: 200px
