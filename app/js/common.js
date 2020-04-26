@@ -141,7 +141,22 @@ $(document).ready(function(){
 
     $('.works-slide').photoswipe();
 
+    /** PRICES custom */
 
+    $('.price-item:first-child').addClass('active').find('.price-item-body').show()
+
+    $('.price-item-head').on("click", function(){
+        var parent = $(this).parents('.price-item');
+
+
+        parent.toggleClass('active').find('.price-item-body').slideToggle();
+
+        parent.siblings('.price-item').each(function(){
+            $(this).removeClass('active');
+            $(this).find('.price-item-body').slideUp();
+        });
+    });
+    /** end PRICES custom */
 
 
     function heightses() {

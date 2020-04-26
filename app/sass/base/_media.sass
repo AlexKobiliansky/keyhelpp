@@ -107,6 +107,16 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .price-item
+    &-head
+      font-size: 17px
+      height: 56px
+      padding: 5px 30px 5px 20px
+    &-block
+      padding-left: 20px
+      padding-right: 30px
+      font-size: 17px
+
   .s-service
     padding-bottom: 70px
     &:after
@@ -314,6 +324,40 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-prices
+    padding-bottom: 50px
+
+  .price-item
+    padding-left: 44px
+    &:before
+      width: 40px
+      height: 40px
+    &-head
+      height: 40px
+      font-size: 12px
+      padding-right: 10px
+      padding-left: 10px
+      &:before
+        top: 19px
+        left: -32px
+        width: 16px
+      &:after
+        height: 16px
+        top: 12px
+        left: -26px
+      .tech
+        width: 75px
+      .name
+        width: calc(100% - 75px)
+    &-block
+      font-size: 14px
+      padding-left: 10px
+      padding-right: 10px
+      .price
+        width: 75px
+      .name
+        width: calc(100% - 75px)
 
   .s-service
     padding-bottom: 40px
